@@ -11,6 +11,7 @@ interface SocialLink {
   title: string
   icon: React.ReactNode
   href?: string
+  target: string
 }
 
 const socialLinks: SocialLink[] = [
@@ -18,6 +19,7 @@ const socialLinks: SocialLink[] = [
     name: 'twitter',
     href: `https://${config.index}`,
     title: `yangsoon`,
+    target: "",
     icon: (
       <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <path d="M945.83466666 502.86768172L531.14549677 107.81949247a28.54867957 28.54867957 0 0 0-19.78852472-7.9156301 28.55418495 28.55418495 0 0 0-19.83256775 7.96077419L78.12569463 503.5987957a28.4804129 28.4804129 0 0 0-8.84493764 20.08691612 28.48591828 28.48591828 0 0 0 7.95526882 20.46348388 28.80743226 28.80743226 0 0 0 20.73985376 8.85154409 28.57070108 28.57070108 0 0 0 19.82706237-7.95526882l57.07423656-54.64416344v326.84648602c0 66.29133763 51.17137205 102.06086882 99.31588816 102.06086882l472.69381506-0.00550538c62.10284731 0 102.23043441-40.61316129 102.23043441-103.46473978V489.95647311l57.1524129 54.44707097a28.55969032 28.55969032 0 0 0 19.78301936 7.91452903 28.44077419 28.44077419 0 0 0 20.77398709-8.90109246 28.42976344 28.42976344 0 0 0 7.90351828-20.4755957 28.53106237 28.53106237 0 0 0-8.89668817-20.0748043zM597.67907097 860.08182366H426.32092903V695.16387097c0-38.17207742 19.17302366-55.55255053 52.02360431-55.55255054h62.71724731c28.03447742 0 56.6227957 13.62030108 56.62279569 58.19072688v162.28087742z"></path>
@@ -29,6 +31,7 @@ const socialLinks: SocialLink[] = [
     name: 'github',
     href: `https://github.com/${config.github}`,
     title: `GitHub @${config.github}`,
+    target: "_blank",
     icon: (
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
         <path d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'></path>
@@ -40,6 +43,7 @@ const socialLinks: SocialLink[] = [
     name: 'zhihu',
     href: `https://www.zhihu.com/people/${config.zhihu}`,
     title: `ZhiHu @${config.github}`,
+    target: "_blank",
     icon: (
       <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
         <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64z m-90.7 477.8l-0.1 1.5c-1.5 20.4-6.3 43.9-12.9 67.6l24-18.1 71 80.7c9.2 33-3.3 63.1-3.3 63.1l-95.7-111.9v-0.1c-8.9 29-20.1 57.3-33.3 84.7-22.6 45.7-55.2 54.7-89.5 57.7-34.4 3-23.3-5.3-23.3-5.3 68-55.5 78-87.8 96.8-123.1 11.9-22.3 20.4-64.3 25.3-96.8H264.1s4.8-31.2 19.2-41.7h101.6c0.6-15.3-1.3-102.8-2-131.4h-49.4c-9.2 45-41 56.7-48.1 60.1-7 3.4-23.6 7.1-21.1 0 2.6-7.1 27-46.2 43.2-110.7 16.3-64.6 63.9-62 63.9-62-12.8 22.5-22.4 73.6-22.4 73.6h159.7c10.1 0 10.6 39 10.6 39h-90.8c-0.7 22.7-2.8 83.8-5 131.4H519s12.2 15.4 12.2 41.7H421.3z m346.5 167h-87.6l-69.5 46.6-16.4-46.6h-40.1V321.5h213.6v387.3zM408.2 611s0-0.1 0 0z"></path><path d="M624.2 705.3l56.8-38.1h45.6-0.1V364.7H596.7v302.5h14.1z"></path>
@@ -50,6 +54,7 @@ const socialLinks: SocialLink[] = [
   config.twitter && {
     name: 'twitter',
     href: `https://twitter.com/${config.twitter}`,
+    target: "_blank",
     title: `Twitter @${config.twitter}`,
     icon: (
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
@@ -62,6 +67,7 @@ const socialLinks: SocialLink[] = [
     name: 'linkedin',
     href: `https://www.linkedin.com/in/${config.linkedin}`,
     title: `LinkedIn ${config.author}`,
+    target: "_blank",
     icon: (
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
         <path d='M6.5 21.5h-5v-13h5v13zM4 6.5C2.5 6.5 1.5 5.3 1.5 4s1-2.4 2.5-2.4c1.6 0 2.5 1 2.6 2.5 0 1.4-1 2.5-2.6 2.5zm11.5 6c-1 0-2 1-2 2v7h-5v-13h5V10s1.6-1.5 4-1.5c3 0 5 2.2 5 6.3v6.7h-5v-7c0-1-1-2-2-2z' />
@@ -73,6 +79,7 @@ const socialLinks: SocialLink[] = [
     name: 'newsletter',
     href: `${config.newsletter}`,
     title: `Newsletter ${config.author}`,
+    target: "_blank",
     icon: (
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
         <path d='M12 .64L8.23 3H5V5L2.97 6.29C2.39 6.64 2 7.27 2 8V18C2 19.11 2.9 20 4 20H20C21.11 20 22 19.11 22 18V8C22 7.27 21.61 6.64 21.03 6.29L19 5V3H15.77M7 5H17V9.88L12 13L7 9.88M8 6V7.5H16V6M5 7.38V8.63L4 8M19 7.38L20 8L19 8.63M8 8.5V10H16V8.5Z' />
@@ -84,6 +91,7 @@ const socialLinks: SocialLink[] = [
     name: 'youtube',
     href: `https://www.youtube.com/${config.youtube}`,
     title: `YouTube ${config.youtube}`,
+    target: "_blank",
     icon: (
       <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
         <path d='M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z' />
@@ -101,7 +109,7 @@ export const PageSocial: React.FC = () => {
           href={action.href}
           key={action.name}
           title={action.title}
-          target='_blank'
+          target={action.target}
           rel='noopener noreferrer'
         >
           <div className={styles.actionBg}>

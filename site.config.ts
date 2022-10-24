@@ -45,10 +45,10 @@ export default siteConfig({
   // any pages defined here will override their default URL paths
   // example:
   //
-  pageUrlOverrides: {
-    '/about': 'dd2baae189004073854bbdde392d5b36',
-  },
-  // pageUrlOverrides: null,
+  // pageUrlOverrides: {
+  //   '/about': 'dd2baae189004073854bbdde392d5b36',
+  // },
+  pageUrlOverrides: null,
 
   utterancesGitHubRepo: "yangsoon/yangsoon.github.io",
 
@@ -59,6 +59,7 @@ export default siteConfig({
   navigationLinks: [
     {
       title: 'About',
+      // url: "/about",
       pageId: 'dd2baae189004073854bbdde392d5b36'
     },
     // {

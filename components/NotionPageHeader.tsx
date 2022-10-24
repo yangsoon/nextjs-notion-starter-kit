@@ -70,6 +70,7 @@ export const NotionPageHeader: React.FC<{
                     href={link.url}
                     key={index}
                     className={cs(styles.navLink, 'breadcrumb', 'button')}
+                    target=""
                   >
                     {link.title}
                   </components.Link>

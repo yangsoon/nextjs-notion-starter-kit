@@ -32,6 +32,24 @@ export const PageHead: React.FC<
       <meta name='robots' content='index,follow' />
       <meta property='og:type' content='website' />
 
+      <meta name="google-site-verification" content="_OJuJrMAK0_lxr0--eH6RZyMOn2Mg_zY1hDyBBKU8fI" />
+      <script
+        async
+        src='https://www.googletagmanager.com/gtag/js?id=G-Y4TMBBH2RZ'
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-Y4TMBBH2RZ', {
+                page_path: window.location.pathname,
+              });
+          `
+        }}
+      />
+
       {site && (
         <>
           <meta property='og:site_name' content={site.name} />

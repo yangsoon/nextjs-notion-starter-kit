@@ -16,10 +16,12 @@ export interface SiteConfig {
   newsletter?: string
   youtube?: string
   zhihu?: string
+  index?: string
 
   defaultPageIcon?: string | null
   defaultPageCover?: string | null
   defaultPageCoverPosition?: number | null
+  utterancesGitHubRepo?: string | null
 
   isPreviewImageSupportEnabled?: boolean
   isTweetEmbedSupportEnabled?: boolean
